@@ -40,11 +40,14 @@
             </testResource>
         </testResources>
         <plugins>
+            <!--clean-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
+
+            <!--source-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -77,7 +80,7 @@
                     </archive>
                 </configuration>
             </plugin>
-
+            <!--war-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -261,7 +264,7 @@
             <version>${spring.version}</version>
         </dependency>
         <dependency>
-            <groupId> com.h2database</groupId>
+            <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
             <scope>test</scope>
@@ -531,6 +534,13 @@
         </dependency>
 
         <!-- hibernate validator  相关jar包 -->
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
@@ -564,28 +574,28 @@
             <version>${shiro.version}</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.apache.shiro</groupId>-->
-            <!--<artifactId>shiro-quartz</artifactId>-->
-            <!--<version>${shiro.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>quartz</artifactId>-->
-                    <!--<groupId>org.opensymphony.quartz</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.shiro</groupId>-->
+        <!--<artifactId>shiro-quartz</artifactId>-->
+        <!--<version>${shiro.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>quartz</artifactId>-->
+        <!--<groupId>org.opensymphony.quartz</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
 
         <!-- quartz -->
         <!--<dependency>-->
-            <!--<groupId>org.quartz-scheduler</groupId>-->
-            <!--<artifactId>quartz</artifactId>-->
-            <!--<version>${quartz.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>c3p0</artifactId>-->
-                    <!--<groupId>c3p0</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.quartz-scheduler</groupId>-->
+        <!--<artifactId>quartz</artifactId>-->
+        <!--<version>${quartz.version}</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>c3p0</artifactId>-->
+        <!--<groupId>c3p0</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
 
         <!-- encache 相关jar包 -->
@@ -653,6 +663,7 @@
         </dependency>
 
         <!-- jcaptcha 验证码 -->
+
         <dependency>
             <groupId>com.octo.captcha</groupId>
             <artifactId>jcaptcha-api</artifactId>
@@ -741,7 +752,6 @@
         <joda-time.version>2.3</joda-time.version>
         <prettytime.version>3.2.3.Final</prettytime.version>
         <jcaptcha.version>2.0-alpha-1</jcaptcha.version>
-
         <jsoup.version>1.7.3</jsoup.version>
     </properties>
 

@@ -47,6 +47,11 @@ public abstract class BaseService<M extends AbstractEntity, ID extends Serializa
         return baseRepository.save(m);
     }
 
+    /**
+     *
+     * @param m
+     * @return
+     */
     public M saveAndFlush(M m) {
         m = save(m);
         baseRepository.flush();
